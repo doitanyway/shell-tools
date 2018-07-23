@@ -10,7 +10,7 @@ eg:   backUp
        |
         ------20180723_164401.sql.tar.gz
 
-ps:脚本文件建议创建一个文件夹放置，比如/shell/backup
+ps:脚本文件建议创建一个文件夹放置，比如/user/shell/backup
 
 ## 2.使用介绍
 * 修改backup.sh脚本配置文件
