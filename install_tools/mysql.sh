@@ -106,6 +106,8 @@ function install_mysql_start(){
   open_PORT
   echo "mysql basedir：" ${basedir}/mysql
   echo "mysql datadir: "${datadir}
+  echo "your mysqlpassword: " ${pw}
+  echo "your mysqlport " ${port} 
   echo "end install..."
 }
 
