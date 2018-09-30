@@ -116,7 +116,7 @@ function mkdir_dir(){
   echo " create directory..."
   mkdir -p ${basedir}
   mkdir -p ${datadir}
-  cd ${basedir}
+  cd /
   echo " create directory complete..."
 }
 
@@ -170,7 +170,7 @@ if [ -e "mysql-5.7.15-linux-glibc2.5-x86_64.tar.gz" ];then
 	echo "mysql already download..."
 else
 	echo "download mysql..."
-	cd ${basedir}
+	cd /
 	wget  https://cdn.mysql.com/archives/mysql-5.7/mysql-5.7.15-linux-glibc2.5-x86_64.tar.gz
 	echo "download complete..."
 fi
@@ -178,10 +178,11 @@ fi
 
 function tar_gz(){
   echo "tar mysql..."
-  cd ${basedir}
+  cd /
   tar -zxvf mysql-5.7.15-linux-glibc2.5-x86_64.tar.gz
-  mv mysql-5.7.15-linux-glibc2.5-x86_64 mysql
-  #rm -rf mysql-5.7.15-linux-glibc2.5-x86_64.tar.gz
+  mv mysql-5.7.15-linux-glibc2.5-x86_64 ${basedir}/mysql
+  cd /
+  rm -rf mysql-5.7.15-linux-glibc2.5-x86_64.tar.gz
   echo "tar complete..."
 }
 
